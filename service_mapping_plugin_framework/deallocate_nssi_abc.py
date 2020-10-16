@@ -46,12 +46,12 @@ class DeallocateNSSIabc(metaclass=abc.ABCMeta):
         self.terminate_network_service_instance()
         self.delete_network_service_instance()
         if self.parameter['mano_template']:
-            self.update_network_service_descriptor()
+            #self.update_network_service_descriptor()
             self.delete_network_service_descriptor()
             self.nf_provisioning()
 
     def nf_provisioning(self):
-        self.update_vnf_package()
+        #self.update_vnf_package()
         self.delete_vnf_package()
 
     @abc.abstractmethod
